@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get("/", function (){
-    return view('home');}
-);
+Route::controller(ProductController::class)->group(function () {
+    Route::get('/', 'index')->name('home');
+});
 
 Route::controller(AuthController::class)->group(function(){
     Route::get('login','login')->name('login');
