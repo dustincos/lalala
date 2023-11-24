@@ -29,13 +29,13 @@ class ProductController extends Controller
     ]);
     }
 
-    // public function dashboard()
-    // {
+    public function dashboard()
+    {
 
-    //     return view('admin.dash',['products'=> Product::latest(5)
-    //     // DB::table('users')->paginate(15)
-    // ]);
-    // }
+        return view('admin.dash',['products'=> Product::latest(5)
+        // DB::table('users')->paginate(15)
+    ]);
+    }
 
     /**
      * Show the form for creating a new resource.

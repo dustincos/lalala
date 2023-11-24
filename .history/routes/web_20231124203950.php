@@ -36,6 +36,7 @@ Route::controller(UserController::class)->group(function() {
 
 Route::controller(ProductController::class)->group(function () {
     Route::get('list', 'index')->name('products.index');
+    Route::get('list', 'dash')->name('products.dash');
     Route::get('add', 'create')->middleware('auth')->name('products.add');
     Route::post('products/store', 'store')->name('products.store');
     Route::get('products/{id}/edit', 'edit')->name('products.edit');

@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product;
-
 
 class AuthController extends Controller
 {
@@ -31,8 +29,8 @@ class AuthController extends Controller
     }
 
     public function dashboard() {
-        return view('admin.product',['products'=> Product::latest()->paginate(5)]);
-    }
+        return view('admin.product',['products'=> Product::latest()->paginate(5)]
+    };
 
     public function admin() {
         return view('admin.admin');

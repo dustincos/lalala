@@ -11,31 +11,21 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    // public function index()
-    // {
-    // $productsP = Product::latest()->paginate(5);
-    // $productsA = Product::latest()->take(5)->get();
-
-    // return view('admin.product', compact('productsP'))
-    //     ->with('productsA', $productsA);
-    // }
-
     public function index()
     {
 
         return view('admin.product',['products'=> Product::latest()->paginate(5)
-
         // DB::table('users')->paginate(15)
     ]);
     }
 
-    // public function dashboard()
-    // {
+    public function dashboard()
+    {
 
-    //     return view('admin.dash',['products'=> Product::latest(5)
-    //     // DB::table('users')->paginate(15)
-    // ]);
-    // }
+        return view('admin.dash',['products'=> Product::latest(5);
+        // DB::table('users')->paginate(15)
+    ]);
+    }
 
     /**
      * Show the form for creating a new resource.

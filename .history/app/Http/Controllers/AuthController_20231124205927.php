@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product;
-
 
 class AuthController extends Controller
 {
@@ -21,7 +19,7 @@ class AuthController extends Controller
     if(auth()->check()){
         return redirect()->intended('dashboard');
     }
-       return view("auth.login");
+    return view('admin.dash',['products'=> Product::latest(5)
     }
 
     // logout
@@ -31,7 +29,7 @@ class AuthController extends Controller
     }
 
     public function dashboard() {
-        return view('admin.product',['products'=> Product::latest()->paginate(5)]);
+        return view('admin.dash');
     }
 
     public function admin() {

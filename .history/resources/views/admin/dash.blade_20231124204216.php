@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'My Store')
 @section('content')
-<div class="table-data">
+{{-- <div class="table-data">
     <div class="order">
         <div class="head">
             <h3>Store</h3>
@@ -44,7 +44,7 @@
             </tbody>
         </table>
     </div>
-</div>
+</div> --}}
 {{-- <div class="row">
     {{ $products->links() }}
 </div> --}}

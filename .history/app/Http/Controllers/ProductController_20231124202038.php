@@ -11,15 +11,6 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    // public function index()
-    // {
-    // $productsP = Product::latest()->paginate(5);
-    // $productsA = Product::latest()->take(5)->get();
-
-    // return view('admin.product', compact('productsP'))
-    //     ->with('productsA', $productsA);
-    // }
-
     public function index()
     {
 

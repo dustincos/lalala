@@ -18,7 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($products as $product)
+                @foreach($productsA as $product)
                 <tr>
                     <td>{{ $loop->index+1 }}</td>
                     <td>

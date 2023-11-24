@@ -20,14 +20,14 @@ class ProductController extends Controller
     //     ->with('productsA', $productsA);
     // }
 
-    public function index()
-    {
+    // public function index()
+    // {
 
-        return view('admin.product',['products'=> Product::latest()->paginate(5)
+    //     return view('admin.product',['products'=> Product::latest()->paginate(5)
 
-        // DB::table('users')->paginate(15)
-    ]);
-    }
+    //     // DB::table('users')->paginate(15)
+    // ]);
+    // }
 
     // public function dashboard()
     // {

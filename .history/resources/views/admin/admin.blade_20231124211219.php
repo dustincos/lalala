@@ -3,7 +3,5 @@
 @section('content')
 
 
-<div class="table-data">
-
-</div>
+<div class="table-data"></div>
 @endsection
