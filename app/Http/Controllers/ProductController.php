@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use File;
 
 
 class ProductController extends Controller
@@ -127,8 +128,10 @@ class ProductController extends Controller
     public function destroy(string $id)
     {
        $product = Product::where('id',$id)->first();
+       if(File::exists(public_path('products/').$product->image)) {
+        File::delete(public_path('products/').$product->image);
+       }
        $product->delete();
        return back()->withSuccess('Item Deleted Successfully!');
-
     }
 }

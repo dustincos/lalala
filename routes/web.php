@@ -18,8 +18,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::controller(ProductController::class)->group(function () {
+Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home');
+    Route::get('about', 'about')->name('home.about');
+    Route::get('contact', 'contact')->name('home.contact');
+    Route::get('store', 'store')->name('home.store');
 });
 
 Route::controller(AuthController::class)->group(function(){
@@ -44,5 +47,3 @@ Route::controller(ProductController::class)->group(function () {
     Route::delete('products/{id}/delete', 'destroy')->name('products.delete');
     Route::get('products/{id}/show', 'show')->name('products.preview');
 });
-
-Route::get('/',[HomeController::class,'index']);
