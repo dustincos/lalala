@@ -1,19 +1,15 @@
 @section('title', 'Store')
 <x-home>
-    
+<section class="productList">
 @foreach($products as $product)
-<div class="box">
-                <tr>
-                    <td>{{ $loop->index+1 }}</td>
-                    <td>
-                        <a href="products/{{ $product->id }}/show" class="text-dark">{{ $product->name }}
-                        </a></td>
-                    <td>{{ $product->price }}</td>
-                    <td>
-                        <img src="products/{{ $product->image }}" class="rounded-circle" width="40" height="40" />
-                    </td>
-                </tr>
-            </div>  
+{{-- {{ $loop->index+1 }} --}}
+<div class="product">
+    <h3>{{$product->name}}</h3>
+    <h5>Rs: {{$product->price}}</h5>
+    <img src="products/{{ $product->image }}" width="200px" height="200px">
+    <button class="h-btn">Buy Now</button>
+</div>
 @endforeach
+</section>
 
 </x-home>
