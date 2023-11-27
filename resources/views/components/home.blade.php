@@ -18,7 +18,7 @@
 <body>
     <!-- header  -->
     <header>
-        <a href="#" class="logo"><i class='bx bx-store'></i>Cake Shop</a>
+        <a href="#" class="logo"><i class='bx bx-store'></i>Bake Bliss</a>
         <ul class="navlist">
             <li><a href="{{route('home')}}" class="active">Home</a></li>
             <li><a href="{{route('home.about')}}">About Us</a></li>

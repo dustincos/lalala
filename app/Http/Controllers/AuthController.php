@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Product;
 
 
@@ -35,7 +36,7 @@ class AuthController extends Controller
     }
 
     public function admin() {
-        return view('admin.admin');
+        return view('admin.admin', ['users'=> User::all()]);
     }
 
 
