@@ -33,7 +33,7 @@
         </div>
     </header>
 {{$slot}}
-    <footer>
+    {{-- <footer>
         <div class="footerContainer">
             <div class="socialIcons">
                 <a href=""><i class='bx bxl-facebook'></i></a>
@@ -54,7 +54,7 @@
                 <p>Copyright &copy;2023 Designed by <span class="designer">CS2 Designs</span></p>
             </div>
         </div>
-    </footer>
+    </footer> --}}
     <!-- js file link -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="{{asset('js/index.js')}}"></script>
