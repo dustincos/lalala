@@ -3,11 +3,6 @@
 
 
 
-
-
-
-
-
     <livewire:productlist/>
 
 

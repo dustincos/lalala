@@ -8,7 +8,7 @@
 
 
 
-    <livewire:productlist/>
+
 
 
 </x-home>

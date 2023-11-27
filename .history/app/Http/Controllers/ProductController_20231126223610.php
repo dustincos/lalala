@@ -80,7 +80,7 @@ class ProductController extends Controller
     public function show(string $id)
     {
         $product = product::where('id',$id)->first();
-        return view('admin.show',['product'=>$product]);
+        return view('admin.show',['products'=>$product]);
     }
 
     /**
@@ -89,7 +89,7 @@ class ProductController extends Controller
     public function edit(string $id)
     {
        $product = Product::where('id',$id)->first();
-       return redirect('admin.dash',['product'=>$product]);
+       return view('admin.dash',['products'=>$product]);
     }
 
     /**

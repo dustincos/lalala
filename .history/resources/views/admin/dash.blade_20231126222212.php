@@ -44,7 +44,7 @@
                         @csrf
                         @method('DELETE')
                         <i class="fa-solid fa-trash"></i>
-                        <a href="products/{{ $product->id }}/delete" >delete</a>
+                        <a href="products/{{ $product->id }}/delete" onclick="myFunction()">delete</a>
                        </form>
                     </td>
 

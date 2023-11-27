@@ -26,6 +26,10 @@ Route::controller(HomeController::class)->group(function () {
 });
 Route::group(['middleware' => 'prevent-back-history'],function(){
 
+        Auth::routes();
+        Route::get('/home', 'HomeController@index');
+
+
 Route::controller(AuthController::class)->group(function(){
     Route::get('login','login')->name('login');
     Route::get('dashboard','dashboard')->middleware('auth')->name('dashboard');
