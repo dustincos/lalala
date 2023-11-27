@@ -35,12 +35,5 @@ sr.reveal('.hero-text',{delay:200, origin: 'bottom'});
 sr.reveal('.hero-img',{delay:350, origin: 'top'});
 sr.reveal('.down-arrow',{delay:450, origin: 'right'});
 
-const activePage = window.location.pathname;
-const navlists = document.querySelector('.navlist').
-forEach(element => {
-    if(element.href.includes('${activePage}')){
-        element.classList.add('active');
-
-    }
-    
-});
+const activePage = window.location;
+console.log('activePage');

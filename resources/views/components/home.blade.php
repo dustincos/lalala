@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title','Document')</title>
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}">
 
     <!-- box icons -->
@@ -18,9 +19,9 @@
 <body>
     <!-- header  -->
     <header>
-        <a href="#" class="logo"><i class='bx bx-store'></i>Bake Bliss</a>
+        <a href="/" class="logo"><i class='bx bx-store'></i>Bake Bliss</a>
         <ul class="navlist">
-            <li><a href="{{route('home')}}" class="active">Home</a></li>
+            <li><a href="{{route('home')}}">Home</a></li>
             <li><a href="{{route('home.about')}}">About Us</a></li>
             <li><a href="{{route('home.store')}}">Products</a></li>
             <li><a href="{{route('home.contact')}}">Contact Us</a></li>

@@ -18,7 +18,7 @@
           <span class="text"></span>
         </a>
         <ul class="side-menu top">
-          <li class="active">
+          <li>
             <a href="{{route('dashboard')}}" class="nav-link">
               <i class="fas fa-border-all"></i>
               <span class="text">Dashboard</span>
@@ -68,21 +68,21 @@
           <label for="switch-mode" class="switch-mode"></label>
       
           <a href="#" class="profile">
-            <img src="profile.png" alt="" />
+            <img src="{{asset('img/client1.jpg')}}" alt="" />
           </a>
         </nav>
       
         <main>
           <div class="head-title">
             <div class="left">
-              <h1>Dashboard</h1>
+              {{-- <h1>Dashboard</h1> --}}
               <ul class="breadcrumb">
                 <li>
                   <a href="#">Dashboard</a>
                 </li>
                 <i class="fas fa-chevron-right"></i>
                 <li>
-                  <a href="#" class="active">Home</a>
+                  <a href="#" class="active">@yield('title')</a>
                 </li>
               </ul>
             </div>
