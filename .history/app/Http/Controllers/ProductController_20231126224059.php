@@ -89,7 +89,7 @@ class ProductController extends Controller
     public function edit(string $id)
     {
        $product = Product::where('id',$id)->first();
-       return redirect('admin.dash',['product'=>$product]);
+       return back('admin.dash',['product'=>$product]);
     }
 
     /**

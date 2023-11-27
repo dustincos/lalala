@@ -7,15 +7,9 @@
             <h3>Store</h3>
             <i class="fas fa-shopping-cart"></i>
         </div>
-
-
         <div>
-            @if (session()->has('message'))
-                {{session()->get('message')}}
-            @endif
+
         </div>
-
-
         <table>
             <thead>
                 <tr>
@@ -44,7 +38,7 @@
                         @csrf
                         @method('DELETE')
                         <i class="fa-solid fa-trash"></i>
-                        <a href="products/{{ $product->id }}/delete" >delete</a>
+                        <a href="#" onclick="myFunction()">delete</a>
                        </form>
                     </td>
 

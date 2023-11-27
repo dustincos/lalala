@@ -48,4 +48,4 @@ Route::controller(ProductController::class)->group(function () {
     Route::delete('products/{id}/delete', 'destroy')->name('products.delete');
     Route::get('products/{id}/show', 'show')->name('products.preview');
 });
-});//prevent back middleware
+});

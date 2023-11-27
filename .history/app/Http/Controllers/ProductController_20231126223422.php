@@ -71,7 +71,7 @@ class ProductController extends Controller
       $product->description=$request->description;
 
       $product->save();
-      return redirect()->route('products.index')->with('success','Item Added, Successfully !');
+      return redirect()->route('product.index')->with('success','Item Added, Successfully !');
     }
 
     /**
@@ -89,7 +89,7 @@ class ProductController extends Controller
     public function edit(string $id)
     {
        $product = Product::where('id',$id)->first();
-       return redirect('admin.dash',['product'=>$product]);
+       return view('admin.dash',['product'=>$product]);
     }
 
     /**
